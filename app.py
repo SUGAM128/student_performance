@@ -86,7 +86,7 @@ if st.button("Predict Performance"):
     if result == 1:
         st.success("✅ Prediction: PASS")
         st.balloons()
-        play_sound("sounds/faahh.mp3")
+
     else:
         st.error("❌ Prediction: FAIL")
-        play_sound("sounds/sad.mp3")
+        
