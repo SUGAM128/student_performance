@@ -4,7 +4,7 @@
 
 The project uses factors such as **study time, attendance, previous score, assignments completed, and number of absences** as input features. A **Random Forest Classifier** is trained on the student performance dataset to learn patterns between these factors and the final result.
 
-The project follows a complete machine learning workflow, including **data preprocessing, exploratory data analysis (EDA), model training, evaluation, and model saving** using Joblib. A **Flask-based web application** is then used to provide a simple interface where users can enter student details and receive a prediction.
+The project follows a complete machine learning workflow, including **data preprocessing, exploratory data analysis (EDA), model training, evaluation, and model saving** using Joblib. A **Streamlit based application** is then used to provide a simple interface where users can enter student details and receive a prediction.
 
 ### Technologies Used
 
@@ -15,7 +15,7 @@ The project follows a complete machine learning workflow, including **data prepr
 * Matplotlib / Seaborn
 * Random Forest Classifier
 * Joblib
-* Flask
+* Streamlit
 * HTML & CSS
 
 ### Project Workflow
