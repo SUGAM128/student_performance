@@ -1,6 +1,21 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import base64
+
+def play_sound(file_path):
+    with open(file_path, "rb") as f:
+        audio = f.read()
+
+    audio_base64 = base64.b64encode(audio).decode()
+
+    audio_html = f"""
+    <audio autoplay>
+        <source src="data:audio/mp3;base64,{audio_base64}" type="audio/mp3">
+    </audio>
+    """
+
+    st.markdown(audio_html, unsafe_allow_html=True)
 
 # Load the saved model
 model_data = joblib.load("student_model.pkl")
@@ -71,5 +86,7 @@ if st.button("Predict Performance"):
     if result == 1:
         st.success("✅ Prediction: PASS")
         st.balloons()
+        play_sound("sounds/faahh.mp3")
     else:
         st.error("❌ Prediction: FAIL")
+        play_sound("sounds/sad.mp3")
