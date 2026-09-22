@@ -70,5 +70,6 @@ if st.button("Predict Performance"):
 
     if result == 1:
         st.success("✅ Prediction: PASS")
+        st.balloons()
     else:
         st.error("❌ Prediction: FAIL")
